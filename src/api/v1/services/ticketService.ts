@@ -105,7 +105,9 @@ export const calculateTicketUrgency = (
   }
 
   const baseScore =
-    PRIORITY_SCORES[ticket.priority];
+    PRIORITY_SCORES[
+      ticket.priority as TicketPriority
+    ];
 
   const urgencyScore =
     baseScore + ticketAge * 5;
